@@ -1,6 +1,6 @@
-A dead simple pub/sub library with priority. Inspired by the original work of the AS3 event model which is pretty delicious.
+A dead simple pub/sub javascript library with priority having no third-party dependencies. Inspired by the original work of the AS3 event model which is pretty delicious.
 
-NOTE: This work is over 2.5 years old, could be tuned and is need of some love. 
+NOTE: This work is over 2.5 years old, could be tuned and is in need of some loving. 
 
 -- start snip --
 function foo1(event){
