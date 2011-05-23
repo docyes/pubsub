@@ -88,38 +88,3 @@ function Dispatcher(type, observers, errorHalt, args){
         preventDefaultState = false;
     }();
 }
-
-/**
- * Examples.
- */
-function foo1(event){
-    console.log("foo1 called.")
-    event.preventDefault();
-}
-function foo2(){
-    var str = "";
-    fdsafdsa
-    for(var i=0; i<100000; i++){
-        str += "f" + new Date();
-    }
-    console.log("foo2 called");
-}
-function foo3(){
-    console.log("foo3 called")  
-}
-
-var myEvent1 = new Subject("PreventDefaultExample");
-myEvent1.addEventListener(foo1, 1);
-myEvent1.addEventListener(foo2, 1);//will never be called because foo1 preventDefault on event
-myEvent1.addEventListener(foo3, 1);//will never be called because foo1 preventDefault on event
-myEvent1.dispatchEvent(false);
-
-
-var myEvent2 = new Subject("PreventDefaultExample");
-myEvent2.addEventListener(foo1, 3);//will be called first due to highest priority
-myEvent2.addEventListener(foo2, 2);//will be called second...
-myEvent2.addEventListener(foo3, 1);//will be called last
-myEvent2.dispatchEvent(false);
-
-
-
