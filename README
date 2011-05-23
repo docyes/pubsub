@@ -4,19 +4,18 @@ NOTE: This work is over 2.5 years old, could be tuned and is need of some love.
 
 -- start snip --
 function foo1(event){
-        console.log("foo1 called.")
-            event.preventDefault();
+    console.log("foo1 called.")
+    event.preventDefault();
 }
 function foo2(){
-        var str = "";
-            fdsafdsa
-                for(var i=0; i<100000; i++){
-                            str += "f" + new Date();
-                                }
-                                    console.log("foo2 called");
+    var str = "";
+    for(var i=0; i<100000; i++){
+        str += "f" + new Date();
+    }
+    console.log("foo2 called");
 }
 function foo3(){
-        console.log("foo3 called")  
+    console.log("foo3 called")  
 }
 
 var myEvent1 = new Subject("PreventDefaultExample");
